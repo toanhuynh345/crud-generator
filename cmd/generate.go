@@ -79,11 +79,11 @@ func generateCRUD(modelName string) {
 	}
 
 	// Generate model
-	generateFile("templates/model.tmpl", "models/"+modelName+".go", model)
-	generateFile("templates/repository.tmpl", "repositories/"+modelName+"_repository.go", model)
-	generateFile("templates/service.tmpl", "services/"+modelName+"_service.go", model)
-	generateFile("templates/handler.tmpl", "handlers/"+modelName+"_handler.go", model)
-	generateFile("templates/routes.tmpl", "routes/"+modelName+"_routes.go", model)
+	generateFile("templates/model.tmpl", "models/"+model.ModelNameLower+".go", model)
+	generateFile("templates/repository.tmpl", "repositories/"+model.ModelNameLower+"_repository.go", model)
+	generateFile("templates/service.tmpl", "services/"+model.ModelNameLower+"_service.go", model)
+	generateFile("templates/handler.tmpl", "handlers/"+model.ModelNameLower+"_handler.go", model)
+	generateFile("templates/routes.tmpl", "routes/"+model.ModelNameLower+"_routes.go", model)
 
 	fmt.Println("CRUD code generated successfully!")
 }

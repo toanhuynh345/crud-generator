@@ -1,4 +1,4 @@
-package gencode
+package main
 
 import "github.com/toanmars/crud-generator/cmd"
 
